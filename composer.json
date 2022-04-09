@@ -1,0 +1,9 @@
+{
+  "name": "nikola/php_framework",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "app\\": "./"
+    }
+  }
+}
