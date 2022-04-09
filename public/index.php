@@ -11,10 +11,7 @@ $app->router->get('/', function () {
     return "Hello world!";
 });
 
-$app->router->get('/aboutme', function () {
-
-    return "I am Nikola!";
-});
+$app->router->get('/aboutme', 'aboutme');
 
 $app->router->get('/contact', function () {
 
