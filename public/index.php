@@ -11,4 +11,9 @@ $app->router->get('/', 'home');
 
 $app->router->get('/aboutme', 'aboutme');
 
+$app->router->post('/aboutme', function () {
+
+    echo "success";
+});
+
 $app->run();
