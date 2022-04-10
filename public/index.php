@@ -2,18 +2,16 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+use app\controllers\SiteController;
 use app\core\Application;
 
 
 $app = new Application(dirname(__DIR__));
 
-$app->router->get('/', 'home');
+$app->router->get('/', [new SiteController(), 'index']);
 
-$app->router->get('/aboutme', 'aboutme');
+$app->router->get('/contact', [new SiteController(), 'show']);
 
-$app->router->post('/aboutme', function () {
-
-    echo "success";
-});
+$app->router->post('/contact', [new SiteController(), 'store']);
 
 $app->run();
