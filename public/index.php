@@ -12,6 +12,6 @@ $app->router->get('/', [new SiteController(), 'index']);
 
 $app->router->get('/contact', [new SiteController(), 'show']);
 
-// $app->router->post('/aboutme', [new SiteController(), 'index']);
+$app->router->post('/contact', [new SiteController(), 'store']);
 
 $app->run();
