@@ -16,4 +16,15 @@ class RegisterModel extends Model
     {
         echo "new user";
     }
+
+    public function rules(): array
+    {
+        return [
+            'fisrtname' => [self::RULE_REQUIRED],
+            'lastname' => [self::RULE_REQUIRED],
+            'email' => [self::RULE_REQUIRED, self::RULE_EMAIL],
+            'password' => [self::RULE_REQUIRED, [self::RULE_MIN, 'min' => 6]],
+            'confirmpassword' => [self::RULE_REQUIRED, [self::RULE_MATCH, 'match' => 'password']]
+        ];
+    }
 }
