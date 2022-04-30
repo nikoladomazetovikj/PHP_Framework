@@ -1,3 +1,8 @@
+<?php
+
+use app\core\Application;
+
+?>
 <!doctype html>
 <html lang="en">
 
@@ -30,6 +35,21 @@
             </div>
         </div>
     </nav>
+
+    <?php if (Application::$app->session->getFlash('success')) : ?>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-6 mx-auto">
+                    <div class="alert alert-success">
+                        <p><?php echo Application::$app->session->getFlash('success') ?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
+
     {{content}}
 
     <!-- Optional JavaScript; choose one of the two! -->
