@@ -66,6 +66,22 @@ abstract class Model
 
                     $this->addError($attribute, self::RULE_MATCH, $rule);
                 }
+
+                if ($ruleName === self::RULE_UNIQUE) {
+
+                    $className = $rule['class'];
+                    $uniqueAttr = $rule['attribute'] ?? $attribute;
+                    $tableName = $className::tableName();
+                    $statement = Application::$app->db->prepare("SELECT * FROM $tableName WHERE $uniqueAttr = :attr");
+                    $statement->bindValue(":attr", $value);
+                    $statement->execute();
+                    $record = $statement->fetchObject();
+
+                    if ($record) {
+
+                        $this->addError($attribute, self::RULE_UNIQUE, ["field" => $attribute]);
+                    }
+                }
             }
         }
 
@@ -88,7 +104,8 @@ abstract class Model
             self::RULE_EMAIL => 'Must be a valid email address',
             self::RULE_MAX => 'Max length must be {max}',
             self::RULE_MIN => 'Min length must be {min}',
-            self::RULE_MATCH => 'Must be same as {match}'
+            self::RULE_MATCH => 'Must be same as {match}',
+            self::RULE_UNIQUE => 'Already exists'
         ];
     }
 
