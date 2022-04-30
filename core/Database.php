@@ -59,7 +59,7 @@ class Database
         $this->pdo->exec('CREATE TABLE IF NOT EXISTS migrations (
             id INT AUTO_INCREMENT PRIMARY KEY,
             migration VARCHAR(255),
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP       
+            created_at TIMESTAMP  DEFAULT CURRENT_TIMESTAMP       
         );');
     }
 
@@ -74,7 +74,7 @@ class Database
     public function saveMigrations(array $migrations)
     {
         $str = implode(",", array_map(fn ($m) => "('$m')", $migrations));
-        $statement = $this->pdo->prepare("INSERT INTO migrations (migration) VALUE ($str)");
+        $statement = $this->pdo->prepare("INSERT INTO migrations (migration) VALUES $str");
 
         $statement->execute();
     }
