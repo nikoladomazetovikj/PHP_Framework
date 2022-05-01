@@ -3,6 +3,7 @@
 namespace app\core;
 
 use Exception;
+use app\core\Session;
 use app\core\Controller;
 
 /**
@@ -28,6 +29,7 @@ class Application
     public ?UserModel $user;
     public string $userClass;
     public string $layout = 'main';
+    public View $view;
 
     public function __construct($rootPath, array $config)
     {
@@ -38,6 +40,7 @@ class Application
         $this->session = new Session();
         $this->router = new Router($this->request, $this->response);
         $this->db = new Database($config['db']);
+        $this->view = new View();
         $this->userClass = $config['userClass'];
 
         $primaryValue = $this->session->get('user');
@@ -92,7 +95,7 @@ class Application
         try {
             echo $this->router->resolve();
         } catch (Exception $e) {
-            echo $this->router->renderView('_error', [
+            echo $this->view->renderView('_error', [
                 'exception' => $e,
             ]);
         }
