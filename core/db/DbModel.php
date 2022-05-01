@@ -1,6 +1,10 @@
 <?php
 
-namespace app\core;
+namespace app\core\db;
+
+use PDOStatement;
+use app\core\Model;
+use app\core\Application;
 
 abstract class DbModel extends Model
 {
@@ -25,7 +29,7 @@ abstract class DbModel extends Model
         return true;
     }
 
-    public static function prepare($sql): \PDOStatement
+    public static function prepare($sql): PDOStatement
     {
         return Application::$app->db->prepare($sql);
     }

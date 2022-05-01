@@ -5,6 +5,8 @@ namespace app\core;
 use Exception;
 use app\core\Session;
 use app\core\Controller;
+use app\core\db\DbModel;
+use app\core\db\Database;
 
 /**
  * Application
