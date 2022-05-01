@@ -31,6 +31,7 @@ use app\core\Application;
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                     <a class="nav-link" href="/contact">Contact</a>
                     <a class="nav-link" href="/register">Register</a>
+                    <a class="nav-link" href="/login">Login</a>
                 </div>
             </div>
         </div>
