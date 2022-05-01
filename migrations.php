@@ -1,7 +1,7 @@
 <?php
 
 use Dotenv\Dotenv;
-use app\core\Application;
+use nikola\phpFramework\Application;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
