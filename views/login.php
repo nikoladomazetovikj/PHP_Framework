@@ -1,3 +1,8 @@
+<?php
+$this->title = 'Login';
+?>
+
+
 <div class="container-fluid mt-5">
     <div class="container">
         <div class="card mx-auto col-6">

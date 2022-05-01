@@ -1,3 +1,8 @@
+<?php
+$this->title = 'Home';
+?>
+
+
 <div class="container-fluid">
     <div class="container my-5">
         <div class="card col-6 mx-auto">
