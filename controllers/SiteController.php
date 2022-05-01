@@ -2,9 +2,9 @@
 
 namespace app\controllers;
 
-use app\core\Request;
-use app\core\Controller;
-use app\core\Application;
+use nikola\phpFramework\Request;
+use nikola\phpFramework\Controller;
+use nikola\phpFramework\Application;
 
 class SiteController extends Controller
 {

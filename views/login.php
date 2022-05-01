@@ -11,7 +11,7 @@ $this->title = 'Login';
             </div>
             <div class="card-body">
                 <!-- form -->
-                <?php $form = app\core\form\Form::begin('/login', 'post') ?>
+                <?php $form = nikola\phpFramework\form\Form::begin('/login', 'post') ?>
                 <div class="row mb-3">
                     <?php echo $form->field($model, 'email') ?>
                 </div>
@@ -19,7 +19,7 @@ $this->title = 'Login';
                     <?php echo $form->field($model, 'password')->passwordField() ?>
                 </div>
                 <button type="submit" class="btn btn-primary">Login</button>
-                <?php app\core\form\Form::end() ?>
+                <?php nikola\phpFramework\form\Form::end() ?>
             </div>
         </div>
     </div>

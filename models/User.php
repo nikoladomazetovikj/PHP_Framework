@@ -2,9 +2,9 @@
 
 namespace app\models;
 
-use app\core\DbModel;
-use app\core\Model;
-use app\core\UserModel;
+use nikola\phpFramework\DbModel;
+use nikola\phpFramework\Model;
+use nikola\phpFramework\UserModel;
 
 class User extends UserModel
 {

@@ -3,13 +3,13 @@
 namespace app\controllers;
 
 use app\models\User;
-use app\core\Request;
-use app\core\Response;
-use app\core\Controller;
-use app\core\Application;
+use nikola\phpFramework\Request;
+use nikola\phpFramework\Response;
+use nikola\phpFramework\Controller;
+use nikola\phpFramework\Application;
 use app\models\LoginForm;
 use app\models\RegisterModel;
-use app\core\middlewares\AuthMiddleware;
+use nikola\phpFramework\middlewares\AuthMiddleware;
 
 class AuthController extends Controller
 {

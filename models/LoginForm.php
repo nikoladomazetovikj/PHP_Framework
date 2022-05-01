@@ -2,9 +2,9 @@
 
 namespace app\models;
 
-use app\core\Model;
+use nikola\phpFramework\Model;
 use app\models\User;
-use app\core\Application;
+use nikola\phpFramework\Application;
 
 class LoginForm extends Model
 {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a58f0ed8c61a07b94c19e70caafefafb",
+    "content-hash": "e40769048ab39f4d2438ddd2644f9834",
     "packages": [
         {
             "name": "graham-campbell/result-type",
@@ -67,6 +67,34 @@
                 }
             ],
             "time": "2021-11-21T21:41:47+00:00"
+        },
+        {
+            "name": "nikola_php_framework/core",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NIkola-mkd/PHP_Framework_core.git",
+                "reference": "f364596d3479f6e03d2c7fd29770227e682607d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NIkola-mkd/PHP_Framework_core/zipball/f364596d3479f6e03d2c7fd29770227e682607d2",
+                "reference": "f364596d3479f6e03d2c7fd29770227e682607d2",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "nikola\\phpFramework\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Core for Nikola's PHP Framework",
+            "support": {
+                "issues": "https://github.com/NIkola-mkd/PHP_Framework_core/issues",
+                "source": "https://github.com/NIkola-mkd/PHP_Framework_core/tree/v1.0.3"
+            },
+            "time": "2022-05-01T23:34:38+00:00"
         },
         {
             "name": "phpoption/phpoption",

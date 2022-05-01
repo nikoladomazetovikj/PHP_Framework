@@ -1,6 +1,6 @@
 <?php
 
-use app\core\Application;
+use nikola\phpFramework\Application;
 
 class m0002_add_password_column_to_users_table
 {
