@@ -19,7 +19,7 @@ $this->title = 'Register';
                     <?php echo $form->field($model, 'lastname') ?>
                 </div>
                 <div class="row mb-3">
-                    <?php echo $form->field($model, 'email')->emailField() ?>
+                    <?php echo $form->field($model, 'email') ?>
                 </div>
                 <div class="row mb-3">
                     <?php echo $form->field($model, 'password')->passwordField() ?>
