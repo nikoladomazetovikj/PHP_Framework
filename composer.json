@@ -1,0 +1,12 @@
+{
+  "name": "nikola/php_framework",
+  "require": {
+    "vlucas/phpdotenv": "^5.4",
+    "nikola_php_framework/core": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "app\\": "./"
+    }
+  }
+}
